@@ -4,7 +4,10 @@ import Image from "next/image";
 
 const AboutMe = () => {
   return (
-    <div className="min-h-screen flex items-center min-w-[1228px] justify-between">
+    <div
+      id="about"
+      className="min-h-screen flex items-center min-w-[1228px] justify-between"
+    >
       <div className="img relative flex flex-col justify-center items-center">
         <div className="main_img w-[340px] h-[383px] rounded-2xl border-black relative">
           <Image

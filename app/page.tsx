@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import HomeSection from "@/components/HomeSection";
 import Navbar from "@/components/Navbar";
+import SkillSection from "@/components/SkillSection";
 import React from "react";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
       <Navbar />
       <HomeSection />
       <AboutMe />
+      <SkillSection />
     </div>
   );
 };
