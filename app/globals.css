@@ -45,9 +45,11 @@
   /* My styles */
   --color-black: #000000;
   --color-prime-black: #213130;
+  --color-prime-black-3: #030712;
   --color-prime-white: #fffffa;
   --color-prime-green: #b0ec9c;
   --color-secondary-green: #8ee472;
+  --color-prime-gray-green: #f2f2e8;
 }
 
 :root {
@@ -132,5 +134,8 @@
 @layer components {
   .btn-text {
     @apply font-light text-lg text-black dark:text-white;
+  }
+  .nav-link {
+    @apply text-lg leading-none text-prime-black-3;
   }
 }
