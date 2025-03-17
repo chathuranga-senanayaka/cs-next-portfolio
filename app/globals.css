@@ -138,4 +138,22 @@
   .nav-link {
     @apply text-lg leading-none text-prime-black-3;
   }
+  .name-text {
+    @apply text-[164px] font-medium leading-35 uppercase;
+  }
+  .role-text {
+    @apply text-[96px] font-medium leading-[120%] capitalize;
+  }
+  .sub-topic {
+    @apply text-2xl font-medium capitalize leading-none mb-8;
+  }
+  .role-sub-topic {
+    @apply text-2xl font-medium capitalize leading-none;
+  }
+  .body-light {
+    @apply text-lg font-light leading-none;
+  }
+  .body-semibold {
+    @apply text-lg font-semibold leading-none;
+  }
 }
