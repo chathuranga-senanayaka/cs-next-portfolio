@@ -26,7 +26,7 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="flex items-center justify-center h-[90px] sticky">
+    <nav className="sticky top-0 z-50 flex items-center justify-center h-[90px] shadow-sm bg-prime-white">
       <ul className="flex gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
