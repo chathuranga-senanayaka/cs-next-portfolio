@@ -1,6 +1,5 @@
 import React from "react";
-import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
-import {}
+import ContactForm from "./ui/contactform";
 
 const ContactSection = () => {
   return (
@@ -15,8 +14,7 @@ const ContactSection = () => {
           </div>
         </div>
         <div className="contact-forms">
-          <form action="">
-          </form>
+          <ContactForm />
           <div className="other">
             <div className="email"></div>
             <div className="dock"></div>
