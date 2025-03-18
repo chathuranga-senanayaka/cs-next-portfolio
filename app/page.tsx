@@ -1,8 +1,9 @@
 import AboutMe from "@/components/AboutMe";
 import HomeSection from "@/components/HomeSection";
 import Navbar from "@/components/Navbar";
-import SkillSection from "@/components/SkillSection";
 import React from "react";
+import SkillSection from "@/components/SkillSection";
+import ProjectCard from "@/components/ui/projectcard";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <HomeSection />
       <AboutMe />
       <SkillSection />
+      <ProjectCard />
     </div>
   );
 };
