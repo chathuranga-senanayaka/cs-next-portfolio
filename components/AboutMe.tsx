@@ -1,6 +1,7 @@
 import React from "react";
 import profile_img from "@/public/main_img.jpg";
 import Image from "next/image";
+import ContactDock from "./ui/contactdock";
 
 const AboutMe = () => {
   return (
@@ -8,6 +9,7 @@ const AboutMe = () => {
       id="about"
       className="min-h-screen flex items-center min-w-[1228px] justify-between"
     >
+      {/* Image Section */}
       <div className="img relative flex flex-col justify-center items-center">
         <div className="main_img w-[340px] h-[383px] rounded-2xl border-black relative">
           <Image
@@ -23,7 +25,9 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      <div className="content">
+
+      {/* Content Section */}
+      <div className="content flex flex-col">
         <div className="sub-topic">about me</div>
         <p className="about_me body-light max-w-[736px] mb-2">
           I’m Chathuranga Senanayaka, a self-taught web developer with a strong
@@ -49,6 +53,11 @@ const AboutMe = () => {
           interfaces. I’m always excited to learn new technologies and am eager
           to take on new challenges that will help me grow as a developer.
         </p>
+
+        {/* ContactDock placed here */}
+        <div className="mt-2">
+          <ContactDock />
+        </div>
       </div>
     </div>
   );
