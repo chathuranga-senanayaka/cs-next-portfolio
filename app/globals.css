@@ -156,4 +156,7 @@
   .body-semibold {
     @apply text-lg font-semibold leading-none;
   }
+  .icon {
+    @apply w-20 h-20;
+  }
 }
