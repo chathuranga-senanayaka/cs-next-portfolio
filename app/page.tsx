@@ -9,7 +9,6 @@ import ProjectSection from "@/components/ProjectSection";
 const Home = () => {
   return (
     <div className="flex flex-col items-center ">
-      <Navbar />
       <HomeSection />
       <AboutMe />
       <SkillSection />
