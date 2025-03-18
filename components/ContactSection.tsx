@@ -1,5 +1,7 @@
 import React from "react";
 import ContactForm from "./ui/contactform";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 const ContactSection = () => {
   return (
@@ -16,8 +18,16 @@ const ContactSection = () => {
         <div className="contact-forms">
           <ContactForm />
           <div className="other">
-            <div className="email"></div>
-            <div className="dock"></div>
+            <div className="email">
+              <div className="body-light">OR direct Email Me:</div>
+              <Button asChild>
+                <Link href={"mailto:email@email.com"}>Email</Link>
+              </Button>
+            </div>
+            <div className="dock">
+              <div className="body-light">You can also connect with me on:</div>
+              
+            </div>
           </div>
         </div>
       </div>
