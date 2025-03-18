@@ -160,4 +160,7 @@
   .icon {
     @apply w-20 h-20;
   }
+  .project-topic {
+    @apply text-2xl font-medium capitalize leading-none;
+  }
 }

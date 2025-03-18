@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import React from "react";
 import SkillSection from "@/components/SkillSection";
 import ProjectCard from "@/components/ui/projectcard";
+import ProjectSection from "@/components/ProjectSection";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <HomeSection />
       <AboutMe />
       <SkillSection />
-      <ProjectCard />
+      <ProjectSection />
     </div>
   );
 };

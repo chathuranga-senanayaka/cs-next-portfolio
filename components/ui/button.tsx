@@ -18,8 +18,7 @@ const buttonVariants = cva(
         nav_link: "nav-link cursor-pointer hover:bg-prime-gray-green",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        nav_link: "px-4 py-2 rounded-2xl",
+        default: "px-4 py-2 rounded-2xl",
       },
     },
     defaultVariants: {

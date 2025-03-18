@@ -30,7 +30,7 @@ const Navbar = () => {
       <ul className="flex gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
-            <Button asChild variant={"nav_link"} size={"nav_link"}>
+            <Button asChild variant={"nav_link"}>
               <Link href={`#${item.id}`}>{item.name}</Link>
             </Button>
           </li>
