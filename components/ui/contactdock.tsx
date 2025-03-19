@@ -3,18 +3,22 @@
 import Link from "next/link";
 import React from "react";
 
-import { buttonVariants } from "@/components/ui/button";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { cn } from "@/lib/utils";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 
 // Import icons from react-icons
-import { SiGithub, SiInstagram, SiLinkedin, SiWhatsapp, SiX } from "react-icons/si";
+import {
+  SiGithub,
+  SiInstagram,
+  SiLinkedin,
+  SiWhatsapp,
+  SiX,
+} from "react-icons/si";
 
 const DATA = {
   skills: [

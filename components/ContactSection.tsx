@@ -16,9 +16,9 @@ const ContactSection = () => {
         <div className="content flex flex-col items-center text-center px-4">
           <div className="sub-topic">Contact Me</div>
           <div className="body-light max-w-[663px]">
-            I would love to hear from you! Whether you're interested in
+            {`I would love to hear from you! Whether you're interested in
             collaborating on a project, hiring me for a job, or just want to
-            chat about web development, feel free to reach out.
+            chat about web development, feel free to reach out.`}
           </div>
         </div>
 
