@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import { Menu, X } from "lucide-react"; // Icons for hamburger menu
 
 const Navbar: React.FC = () => {
   const [isHomeSection, setIsHomeSection] = useState<boolean>(true);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false); // State for mobile menu
 
   // Function to check the current section
   const checkSection = (): void => {
@@ -37,6 +39,7 @@ const Navbar: React.FC = () => {
         window.scrollTo({ top: targetPosition, behavior: "smooth" });
       }
     }
+    setIsMenuOpen(false); // Close the mobile menu after clicking a link
   };
 
   const navItems = [
@@ -64,29 +67,60 @@ const Navbar: React.FC = () => {
 
   return (
     <nav
-      className={`sticky top-0 z-50 flex items-center justify-center h-[90px] shadow-sm transition-all duration-300 ${
+      className={`sticky top-0 z-50 flex items-center justify-end h-[90px] w-full md:justify-center md:w-[1280px] rounded-none md:rounded-full shadow-sm transition-all duration-300 px-4 sm:px-8 ${
         isHomeSection
           ? "bg-prime-white w-full"
-          : "bg-white/50 backdrop-blur-md rounded-full w-[40vw]" // Glass effect for non-home sections
+          : "bg-white/50 backdrop-blur-md rounded-full w-full md:w-[1280px]" // Glass effect for non-home sections
       }`}
     >
-      <ul className="flex gap-4">
+      <div className="md:hidden">
+        <Button
+          variant={"ghost"}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle Menu"
+        >
+          {isMenuOpen ? <X size={50} /> : <Menu size={24} />}
+        </Button>
+      </div>
+
+      {/* Desktop Menu (Hidden on Mobile) */}
+      <ul className="hidden md:flex gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
             <Button
               asChild
               variant={"nav_link"}
-              onClick={() => handleSmoothScroll(item.id)} // Add onClick handler
+              onClick={() => handleSmoothScroll(item.id)}
             >
               <Link href={`#${item.id}`} scroll={false}>
-                {" "}
-                {/* Disable default scroll behavior */}
                 {item.name}
               </Link>
             </Button>
           </li>
         ))}
       </ul>
+
+      {/* Mobile Menu (Visible when Menu is Open) */}
+      {isMenuOpen && (
+        <div className="absolute top-[90px] left-0 w-full bg-white/95 backdrop-blur-md md:hidden shadow-lg">
+          <ul className="flex flex-col gap-2 p-4">
+            {navItems.map((item, index) => (
+              <li key={index}>
+                <Button
+                  asChild
+                  variant={"nav_link"}
+                  className="w-full justify-start"
+                  onClick={() => handleSmoothScroll(item.id)}
+                >
+                  <Link href={`#${item.id}`} scroll={false}>
+                    {item.name}
+                  </Link>
+                </Button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </nav>
   );
 };

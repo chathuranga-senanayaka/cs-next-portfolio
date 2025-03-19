@@ -141,7 +141,7 @@
     @apply text-lg leading-none text-prime-black-3;
   }
   .name-text {
-    @apply text-[164px] font-medium leading-35 uppercase;
+    @apply text-[164px] leading-35 font-medium uppercase;
   }
   .role-text {
     @apply text-[96px] font-medium leading-[120%] capitalize;

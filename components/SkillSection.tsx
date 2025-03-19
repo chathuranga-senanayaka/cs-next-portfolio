@@ -1,4 +1,3 @@
-import { div } from "framer-motion/client";
 import React from "react";
 import {
   SiAdobephotoshop,
@@ -88,22 +87,25 @@ const SkillSection = () => {
   ];
 
   return (
-    <div id="skills" className="min-h-screen flex items-center justify-center">
-      <div id="skills" className="py-10 min-w-320  rounded-2xl bg-prime-purple">
-        <h2 className="text-center sub-topic">Skills</h2>
-        <div className="grid grid-cols-2 gap-x-4 gap-y-10 px-5">
+    <div
+      id="skills"
+      className="min-h-screen w-full flex items-center justify-center"
+    >
+      <div className="py-10 max-w-5xl w-full rounded-2xl bg-prime-purple md:min-w-[1280px]">
+        <h2 className="text-center sub-topic mb-6">Skills</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10">
           {allSkills.map((group, index) => (
             <div key={index} className="flex flex-col items-center">
-              <h3 className="text-xl font-semibold mb-4">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4">
                 - {group.category} -
               </h3>
-              <div className="grid grid-cols-4 gap-10">
+              <div className="grid grid-cols-3  sm:grid-cols-4 gap-6">
                 {group.skills.map((skill, indx) => {
                   const IconComponent = skill.icon;
                   return (
                     <div key={indx} className="flex flex-col items-center">
-                      <IconComponent className="text-6xl text-gray-700" />
-                      <p className="mt-2 text-sm">{skill.name}</p>
+                      <IconComponent className="text-4xl sm:text-6xl text-gray-700" />
+                      <p className="mt-2 text-xs sm:text-sm">{skill.name}</p>
                     </div>
                   );
                 })}

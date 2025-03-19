@@ -61,7 +61,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="John Doe"
                     {...field}
-                    className="w-[600px] h-[50px] bg-prime-fill-white border-black border rounded-[22px]"
+                    className="lg:w-[600px] lg:h-[50px] w-[80vw] bg-prime-fill-white border-black border rounded-[22px]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -79,7 +79,7 @@ export default function ContactForm() {
                   <Input
                     placeholder="johndoe@email.com"
                     {...field}
-                    className="w-[600px] h-[50px] bg-prime-fill-white border-black border rounded-[22px]"
+                    className="lg:w-[600px] lg:h-[50px] w-[80vw] bg-prime-fill-white border-black border rounded-[22px]"
                   />
                 </FormControl>
                 <FormMessage />
@@ -97,7 +97,7 @@ export default function ContactForm() {
                   <Textarea
                     placeholder="Let's work TOGETHER"
                     {...field}
-                    className="min-h-[150px] w-[600px] bg-prime-fill-white border-black border rounded-[22px]"
+                    className="min-h-[150px] lg:w-[600px]  w-[80vw] bg-prime-fill-white border-black border rounded-[22px]"
                   />
                 </FormControl>
                 <FormMessage />
