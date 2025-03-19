@@ -23,6 +23,22 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", checkSection);
   }, []);
 
+  // Function to handle smooth scrolling to sub-topic
+  const handleSmoothScroll = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      // Find the sub-topic element within the section
+      const subTopic = section.querySelector(
+        ".sub-topic"
+      ) as HTMLElement | null;
+      if (subTopic) {
+        const offset = 120; // Adjust this value to match your Navbar height
+        const targetPosition = subTopic.offsetTop - offset;
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
+      }
+    }
+  };
+
   const navItems = [
     {
       name: "Home",
@@ -57,8 +73,16 @@ const Navbar: React.FC = () => {
       <ul className="flex gap-4">
         {navItems.map((item, index) => (
           <li key={index}>
-            <Button asChild variant={"nav_link"}>
-              <Link href={`#${item.id}`}>{item.name}</Link>
+            <Button
+              asChild
+              variant={"nav_link"}
+              onClick={() => handleSmoothScroll(item.id)} // Add onClick handler
+            >
+              <Link href={`#${item.id}`} scroll={false}>
+                {" "}
+                {/* Disable default scroll behavior */}
+                {item.name}
+              </Link>
             </Button>
           </li>
         ))}

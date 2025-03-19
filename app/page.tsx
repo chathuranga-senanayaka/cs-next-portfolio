@@ -9,7 +9,7 @@ import ContactSection from "@/components/ContactSection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center ">
+    <div className="flex flex-col items-center gap-10">
       <HomeSection />
       <AboutMe />
       <SkillSection />

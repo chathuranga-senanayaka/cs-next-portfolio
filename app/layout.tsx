@@ -23,7 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={roboto.className}>
-      <body className={` antialiased flex flex-col items-center`}>
+      <body
+        className={` antialiased flex flex-col items-center scroll-smooth bg-prime-white`}
+      >
         <Navbar />
         <main>{children}</main>
         <Footer />

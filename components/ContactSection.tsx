@@ -9,7 +9,7 @@ const ContactSection = () => {
   return (
     <div
       id="contact"
-      className="min-h-screen w-[1280px] rounded-[22px] bg-[#C2E2FF] flex items-center justify-center "
+      className="min-h-screen w-[1280px] rounded-[22px] bg-[#C2E2FF] flex items-center justify-center mb-8"
     >
       <div className="wrapper flex flex-col items-center gap-8">
         <div className="content flex flex-col items-center ">

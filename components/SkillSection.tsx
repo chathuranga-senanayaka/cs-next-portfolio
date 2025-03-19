@@ -90,7 +90,7 @@ const SkillSection = () => {
   return (
     <div id="skills" className="min-h-screen flex items-center justify-center">
       <div id="skills" className="py-10 min-w-320  rounded-2xl bg-prime-purple">
-        <h2 className="text-center text-3xl font-bold mb-6">Skills</h2>
+        <h2 className="text-center sub-topic">Skills</h2>
         <div className="grid grid-cols-2 gap-x-4 gap-y-10 px-5">
           {allSkills.map((group, index) => (
             <div key={index} className="flex flex-col items-center">

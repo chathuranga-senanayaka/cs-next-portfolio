@@ -80,6 +80,7 @@ const HomeSection = () => {
       >
         <div className="text flex flex-col items-center gap-[-20px]">
           <div className="header flex flex-col items-center">
+            <div className="sub-topic text-3xl font-bold">I'm</div>
             {/* Add hover effects to your name */}
             <motion.div
               className="name name-text cursor-none"
