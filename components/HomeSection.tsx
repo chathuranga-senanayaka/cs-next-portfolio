@@ -10,12 +10,34 @@ import ContactDock from "./ui/contactdock";
 const HomeSection = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [isSkillHovering, setIsSkillHovering] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+
+  // Update cursor position on mouse move
+  const handleMouseMove = (e) => {
+    setCursorPosition({ x: e.clientX, y: e.clientY });
+  };
 
   return (
     <div
       id="home"
       className="min-h-screen max-w-320 flex justify-center items-center px-80 rounded-2xl bg-prime-gray-green pt-[90px] relative overflow-hidden"
+      onMouseMove={handleMouseMove}
     >
+      {/* Custom Cursor (Yellow Circle) */}
+      {isHovering && (
+        <motion.div
+          className="fixed w-24 h-24 bg-yellow-400 rounded-full pointer-events-none"
+          style={{
+            left: cursorPosition.x - 12, // Center the circle
+            top: cursorPosition.y - 12, // Center the circle
+          }}
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0 }}
+          transition={{ duration: 0.2 }}
+        />
+      )}
+
       <div className="hero-content flex flex-col items-center justify-center gap-8">
         <div className="text flex flex-col items-center gap-[-20px]">
           <div className="header flex flex-col items-center">
