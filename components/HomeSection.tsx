@@ -16,7 +16,9 @@ const HomeSection = () => {
 
   // Update cursor position on mouse move
   const handleMouseMove = (e) => {
-    setCursorPosition({ x: e.clientX, y: e.clientY });
+    requestAnimationFrame(() => {
+      setCursorPosition({ x: e.clientX, y: e.clientY });
+    });
   };
 
   // Simulate a loading delay and typewriter effect
@@ -83,22 +85,14 @@ const HomeSection = () => {
             <div className="sub-topic text-xl leading-none md:text-3xl font-bold">
               I'm
             </div>
-            {/* Add hover effects to  name */}
             <motion.div
-              className="name name-text cursor-none text-3xl leading-none  sm:text-4xl md:text-[164px] md:leading-35"
+              className="name name-text cursor-none text-3xl leading-none sm:text-4xl md:text-[164px] md:leading-35"
               onMouseEnter={() => setIsHoveringName(true)}
               onMouseLeave={() => setIsHoveringName(false)}
               whileHover={{ scale: 1.05 }} // Slight scale effect on hover
             >
-              CHATHURANGA
-            </motion.div>
-            <motion.div
-              className="name name-text cursor-none text-3xl  leading-none sm:text-4xl md:text-[164px] md:leading-35"
-              onMouseEnter={() => setIsHoveringName(true)}
-              onMouseLeave={() => setIsHoveringName(false)}
-              whileHover={{ scale: 1.05 }} // Slight scale effect on hover
-            >
-              SENANAYAKA
+              <div>CHATHURANGA</div>
+              <div>SENANAYAKA</div>
             </motion.div>
           </div>
           {/* Hoverable "Front End Developer" text */}
@@ -132,7 +126,7 @@ const HomeSection = () => {
               </Link>
             </Button>
             <Button asChild variant={"outline"} className="w-full sm:w-auto">
-              <Link href={"#"}>
+              <Link href={"#"} aria-label="Download Resume">
                 <BsDownload /> Download Resume
               </Link>
             </Button>
